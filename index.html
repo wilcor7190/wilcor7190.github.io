@@ -4,314 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>William Corredor | Senior Backend Developer & Cloud Architect</title>
-<meta name="description" content="Senior Backend Developer & Cloud Architect | Java · Node.js · AWS · Kubernetes | 13+ años">
+<meta name="description" content="Senior Backend Developer & Cloud Architect con 13+ años construyendo sistemas de alto impacto. Especializado en Java, Node.js, AWS, Kubernetes e IA aplicada al desarrollo. Disponible para roles remotos.">
+<meta name="keywords" content="William Corredor, desarrollador backend, cloud architect, Java, Node.js, AWS, Kubernetes, microservicios, Colombia, remoto, backend developer">
+<meta name="author" content="William Fernando Corredor Avendaño">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="William Corredor | Senior Backend Developer & Cloud Architect">
+<meta property="og:description" content="13+ años construyendo sistemas de alto impacto para banca, telecomunicaciones y seguros. Java · Node.js · AWS · Kubernetes · IA.">
+<meta property="og:url" content="https://wilcor7190.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="William Corredor | Senior Backend Developer">
+<meta name="twitter:description" content="13+ años · Java · Node.js · AWS · Kubernetes · IA Aplicada">
+<link rel="canonical" href="https://wilcor7190.github.io">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0a0f;
-    --bg2: #111118;
-    --bg3: #1a1a24;
-    --accent: #00d4ff;
-    --accent2: #7c3aed;
-    --accent3: #10b981;
-    --text: #f0f0f8;
-    --text2: #9090a8;
-    --text3: #5a5a72;
-    --border: rgba(255,255,255,0.07);
-    --card: rgba(255,255,255,0.04);
+    --bg:#0a0a0f; --bg2:#111118; --bg3:#1a1a24;
+    --accent:#00d4ff; --accent2:#7c3aed; --accent3:#10b981;
+    --text:#f0f0f8; --text2:#9090a8; --text3:#5a5a72;
+    --border:rgba(255,255,255,0.07); --card:rgba(255,255,255,0.04);
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body {
-    font-family: 'Sora', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
 
   /* NAV */
-  nav {
-    position: fixed; top:0; width:100%; z-index:100;
-    display:flex; justify-content:space-between; align-items:center;
-    padding: 1rem 2.5rem;
-    background: rgba(10,10,15,0.85);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem; color: var(--accent);
-    text-decoration: none; letter-spacing: 0.05em;
-  }
-  .nav-links { display:flex; gap:2rem; list-style:none; }
-  .nav-links a {
-    color: var(--text2); text-decoration:none;
-    font-size: 0.85rem; font-weight:500; letter-spacing:0.05em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent); }
-  .lang-btn {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem; color: var(--text2);
-    background: var(--card); border: 1px solid var(--border);
-    padding: 0.4rem 0.9rem; border-radius: 4px;
-    cursor:pointer; transition: all 0.2s;
-  }
-  .lang-btn:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* HERO */
-  #hero {
-    min-height: 100vh;
-    display: flex; flex-direction:column;
-    justify-content:center; align-items:flex-start;
-    padding: 8rem 2.5rem 4rem;
-    max-width: 1100px; margin:0 auto;
-    position: relative;
-  }
-  .hero-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem; color: var(--accent);
-    letter-spacing: 0.2em; text-transform:uppercase;
-    margin-bottom: 1.5rem;
-    display:flex; align-items:center; gap:0.75rem;
-  }
-  .hero-tag::before {
-    content:''; display:inline-block;
-    width:40px; height:1px; background:var(--accent);
-  }
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700; line-height: 1.05;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-  }
-  h1 span { color: var(--accent); }
-  .hero-sub {
-    font-size: 1.15rem; color: var(--text2);
-    max-width: 580px; margin-bottom: 2.5rem;
-    font-weight: 300; line-height: 1.8;
-  }
-  .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
-  .btn-primary {
-    display:inline-flex; align-items:center; gap:0.5rem;
-    padding: 0.85rem 2rem; border-radius:4px;
-    background: var(--accent); color: #0a0a0f;
-    font-weight:700; font-size:0.9rem; text-decoration:none;
-    letter-spacing:0.05em; text-transform:uppercase;
-    transition: all 0.2s;
-  }
-  .btn-primary:hover { background: #00b8d9; transform:translateY(-1px); }
-  .btn-outline {
-    display:inline-flex; align-items:center; gap:0.5rem;
-    padding: 0.85rem 2rem; border-radius:4px;
-    border: 1px solid var(--border); color: var(--text);
-    font-weight:500; font-size:0.9rem; text-decoration:none;
-    letter-spacing:0.05em; text-transform:uppercase;
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-  .hero-stats {
-    display:flex; gap:3rem; margin-top: 4rem;
-    padding-top: 3rem; border-top: 1px solid var(--border);
-  }
-  .stat-num {
-    font-family: 'Space Mono', monospace;
-    font-size: 2rem; font-weight:700; color: var(--accent);
-    display:block;
-  }
-  .stat-label { font-size:0.8rem; color:var(--text2); text-transform:uppercase; letter-spacing:0.1em; }
+  nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+  .nav-logo{font-family:'Space Mono',monospace;font-size:1rem;color:var(--accent);text-decoration:none;letter-spacing:.05em;}
+  .nav-links{display:flex;gap:2rem;list-style:none;}
+  .nav-links a{color:var(--text2);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s;}
+  .nav-links a:hover{color:var(--accent);}
+  .lang-btn{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--text2);background:var(--card);border:1px solid var(--border);padding:.4rem .9rem;border-radius:4px;cursor:pointer;transition:all .2s;}
+  .lang-btn:hover{color:var(--accent);border-color:var(--accent);}
 
   /* GRID BG */
-  .grid-bg {
-    position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;
-    background-image:
-      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  .glow {
-    position:fixed; top:20%; right:10%; width:500px; height:500px; z-index:-1;
-    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
-    pointer-events:none;
-  }
+  .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);background-size:60px 60px;}
+  .glow{position:fixed;top:20%;right:10%;width:500px;height:500px;z-index:-1;background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 70%);pointer-events:none;}
+
+  /* HERO */
+  #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2.5rem 4rem;max-width:1100px;margin:0 auto;}
+  .hero-inner{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;}
+  .hero-tag{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;}
+  .hero-tag::before{content:'';display:inline-block;width:40px;height:1px;background:var(--accent);}
+  h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-.02em;}
+  h1 .accent{color:var(--accent);}
+  .hero-sub{font-size:1.05rem;color:var(--text2);max-width:540px;margin-bottom:2.5rem;font-weight:300;line-height:1.8;}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+  .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:4px;background:var(--accent);color:#0a0a0f;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+  .btn-primary:hover{background:#00b8d9;transform:translateY(-1px);}
+  .btn-outline{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:4px;border:1px solid var(--border);color:var(--text);font-weight:500;font-size:.9rem;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* AVATAR */
+  .hero-avatar{position:relative;flex-shrink:0;}
+  .avatar-ring{width:260px;height:260px;border-radius:50%;border:2px solid rgba(0,212,255,.3);display:flex;align-items:center;justify-content:center;position:relative;}
+  .avatar-ring::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(0,212,255,.1);}
+  .avatar-img{width:240px;height:240px;border-radius:50%;object-fit:cover;border:3px solid var(--bg3);}
+  .avatar-initials{width:240px;height:240px;border-radius:50%;background:var(--bg3);border:3px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--accent);}
+  .avatar-badge{position:absolute;bottom:10px;right:10px;background:var(--accent3);color:#0a0a0f;font-size:.65rem;font-weight:700;padding:.3rem .7rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;}
+
+  .hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);}
+  .stat-num{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;color:var(--accent);display:block;}
+  .stat-label{font-size:.8rem;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;}
 
   /* SECTIONS */
-  section { max-width:1100px; margin:0 auto; padding: 6rem 2.5rem; }
-  .section-label {
-    font-family:'Space Mono',monospace; font-size:0.75rem;
-    color:var(--accent); letter-spacing:0.2em; text-transform:uppercase;
-    display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;
-  }
-  .section-label::before { content:''; width:40px; height:1px; background:var(--accent); }
-  .section-title { font-size: clamp(1.8rem,4vw,2.8rem); font-weight:700; margin-bottom:3rem; letter-spacing:-0.02em; }
+  section{max-width:1100px;margin:0 auto;padding:6rem 2.5rem;}
+  .section-label{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
+  .section-label::before{content:'';width:40px;height:1px;background:var(--accent);}
+  .section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:3rem;letter-spacing:-.02em;}
 
   /* ABOUT */
-  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-  .about-text p { color:var(--text2); line-height:1.9; margin-bottom:1.2rem; font-size:0.95rem; }
-  .about-text p strong { color:var(--text); }
-  .about-cards { display:grid; gap:1rem; }
-  .about-card {
-    background:var(--card); border:1px solid var(--border);
-    border-radius:8px; padding:1.25rem 1.5rem;
-    display:flex; align-items:flex-start; gap:1rem;
-  }
-  .about-card-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
-  .about-card-title { font-size:0.85rem; font-weight:600; margin-bottom:0.25rem; }
-  .about-card-text { font-size:0.8rem; color:var(--text2); }
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+  .about-text p{color:var(--text2);line-height:1.9;margin-bottom:1.2rem;font-size:.95rem;}
+  .about-text p strong{color:var(--text);}
+  .about-cards{display:grid;gap:1rem;}
+  .about-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s;}
+  .about-card:hover{border-color:rgba(0,212,255,.3);}
+  .about-card-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px;}
+  .about-card-title{font-size:.85rem;font-weight:600;margin-bottom:.25rem;}
+  .about-card-text{font-size:.8rem;color:var(--text2);}
 
   /* SKILLS */
-  .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; }
-  .skill-group {
-    background:var(--card); border:1px solid var(--border);
-    border-radius:8px; padding:1.5rem;
-  }
-  .skill-group-title {
-    font-family:'Space Mono',monospace; font-size:0.7rem;
-    color:var(--accent); letter-spacing:0.15em; text-transform:uppercase;
-    margin-bottom:1rem; padding-bottom:0.75rem;
-    border-bottom:1px solid var(--border);
-  }
-  .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
-  .skill-tag {
-    font-size:0.78rem; padding:0.3rem 0.8rem;
-    border-radius:3px; border:1px solid var(--border);
-    color:var(--text2); background:var(--bg3);
-    font-family:'Space Mono',monospace;
-    transition: all 0.2s;
-  }
-  .skill-tag:hover { color:var(--accent); border-color:var(--accent); }
-  .skill-tag.hot { color:var(--accent3); border-color:rgba(16,185,129,0.3); background:rgba(16,185,129,0.05); }
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+  .skill-group{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.5rem;}
+  .skill-group-title{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border);}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:.5rem;}
+  .skill-tag{font-size:.78rem;padding:.3rem .8rem;border-radius:3px;border:1px solid var(--border);color:var(--text2);background:var(--bg3);font-family:'Space Mono',monospace;transition:all .2s;}
+  .skill-tag:hover{color:var(--accent);border-color:var(--accent);}
+  .skill-tag.hot{color:var(--accent3);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.05);}
 
   /* EXPERIENCE */
-  .exp-list { display:flex; flex-direction:column; gap:0; }
-  .exp-item {
-    display:grid; grid-template-columns:180px 1fr;
-    gap:2rem; padding:2rem 0;
-    border-bottom:1px solid var(--border);
-    position:relative;
-  }
-  .exp-item:first-child { border-top:1px solid var(--border); }
-  .exp-meta { padding-top:0.25rem; }
-  .exp-period {
-    font-family:'Space Mono',monospace; font-size:0.72rem;
-    color:var(--text3); letter-spacing:0.05em; margin-bottom:0.5rem;
-  }
-  .exp-company { font-size:0.85rem; color:var(--accent); font-weight:600; margin-bottom:0.5rem; }
-  .exp-loc { font-size:0.75rem; color:var(--text3); }
-  .exp-title { font-size:1rem; font-weight:700; margin-bottom:0.75rem; }
-  .exp-desc { font-size:0.88rem; color:var(--text2); line-height:1.8; }
-  .exp-bullets { list-style:none; margin-top:0.75rem; display:flex; flex-direction:column; gap:0.4rem; }
-  .exp-bullets li { font-size:0.85rem; color:var(--text2); padding-left:1.2rem; position:relative; }
-  .exp-bullets li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-size:0.7rem; top:0.1rem; }
-  .exp-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; }
-  .exp-tag {
-    font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:3px;
-    background:rgba(0,212,255,0.08); color:var(--accent);
-    font-family:'Space Mono',monospace; border:1px solid rgba(0,212,255,0.15);
-  }
+  .exp-list{display:flex;flex-direction:column;}
+  .exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border);}
+  .exp-item:first-child{border-top:1px solid var(--border);}
+  .exp-period{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--text3);letter-spacing:.05em;margin-bottom:.5rem;}
+  .exp-company{font-size:.85rem;color:var(--accent);font-weight:600;margin-bottom:.5rem;}
+  .exp-loc{font-size:.75rem;color:var(--text3);}
+  .exp-title{font-size:1rem;font-weight:700;margin-bottom:.75rem;}
+  .exp-bullets{list-style:none;margin-top:.75rem;display:flex;flex-direction:column;gap:.4rem;}
+  .exp-bullets li{font-size:.85rem;color:var(--text2);padding-left:1.2rem;position:relative;}
+  .exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:.7rem;top:.1rem;}
+  .exp-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;}
+  .exp-tag{font-size:.7rem;padding:.2rem .6rem;border-radius:3px;background:rgba(0,212,255,.08);color:var(--accent);font-family:'Space Mono',monospace;border:1px solid rgba(0,212,255,.15);}
+
+  /* CERTIFICATIONS */
+  .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
+  .cert-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s;}
+  .cert-card:hover{border-color:rgba(124,58,237,.4);}
+  .cert-icon{width:36px;height:36px;border-radius:6px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+  .cert-name{font-size:.85rem;font-weight:600;margin-bottom:.2rem;color:var(--text);}
+  .cert-issuer{font-size:.75rem;color:var(--text3);font-family:'Space Mono',monospace;}
+  .cert-year{font-size:.7rem;color:var(--accent2);margin-top:.2rem;}
 
   /* AI SECTION */
-  .ai-section {
-    background:var(--bg2); border:1px solid var(--border);
-    border-radius:12px; padding:3rem; margin-top:1rem;
-  }
-  .ai-flow {
-    display:grid; grid-template-columns:1fr auto 1fr;
-    gap:2rem; align-items:center; margin-top:2rem;
-  }
-  .ai-box {
-    background:var(--bg3); border:1px solid var(--border);
-    border-radius:8px; padding:1.5rem;
-  }
-  .ai-box-label {
-    font-family:'Space Mono',monospace; font-size:0.65rem;
-    color:var(--text3); letter-spacing:0.15em; text-transform:uppercase;
-    margin-bottom:0.75rem;
-  }
-  .ai-box-title { font-size:0.95rem; font-weight:600; margin-bottom:0.5rem; }
-  .ai-box-sub { font-size:0.78rem; color:var(--text2); }
-  .ai-arrow { font-size:1.5rem; color:var(--accent); text-align:center; }
-  .ai-result {
-    text-align:center; margin-top:2rem; padding:1.5rem;
-    background:rgba(16,185,129,0.05); border:1px solid rgba(16,185,129,0.2);
-    border-radius:8px;
-  }
-  .ai-result-num {
-    font-family:'Space Mono',monospace; font-size:2.5rem;
-    color:var(--accent3); font-weight:700;
-  }
-  .ai-result-label { font-size:0.85rem; color:var(--text2); margin-top:0.25rem; }
-  .ai-tools { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.5rem; }
-  .ai-tool {
-    display:flex; align-items:center; gap:0.5rem;
-    font-size:0.8rem; color:var(--text2);
-    background:var(--bg3); border:1px solid var(--border);
-    padding:0.5rem 1rem; border-radius:4px;
-  }
-  .ai-tool-dot { width:6px; height:6px; border-radius:50%; background:var(--accent3); flex-shrink:0; }
+  .ai-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:3rem;}
+  .ai-flow{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;margin-top:2rem;}
+  .ai-box{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1.5rem;}
+  .ai-box-label{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--text3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem;}
+  .ai-box-title{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
+  .ai-box-sub{font-size:.78rem;color:var(--text2);}
+  .ai-arrow{font-size:1.5rem;color:var(--accent);text-align:center;}
+  .ai-result{text-align:center;margin-top:2rem;padding:1.5rem;background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2);border-radius:8px;}
+  .ai-result-num{font-family:'Space Mono',monospace;font-size:2.5rem;color:var(--accent3);font-weight:700;}
+  .ai-result-label{font-size:.85rem;color:var(--text2);margin-top:.25rem;}
+  .ai-tools{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem;}
+  .ai-tool{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--text2);background:var(--bg3);border:1px solid var(--border);padding:.5rem 1rem;border-radius:4px;}
+  .ai-tool-dot{width:6px;height:6px;border-radius:50%;background:var(--accent3);flex-shrink:0;}
 
   /* CONTACT */
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
-  .contact-card {
-    background:var(--card); border:1px solid var(--border);
-    border-radius:8px; padding:1.5rem;
-    display:flex; align-items:center; gap:1.25rem;
-    text-decoration:none; transition:all 0.2s;
-  }
-  .contact-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-  .contact-icon { font-size:1.5rem; }
-  .contact-label { font-size:0.7rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.25rem; }
-  .contact-value { font-size:0.9rem; color:var(--text); font-weight:500; }
-  .contact-cta { margin-top:3rem; text-align:center; }
-  .contact-cta h3 { font-size:1.5rem; font-weight:700; margin-bottom:0.75rem; }
-  .contact-cta p { color:var(--text2); font-size:0.9rem; margin-bottom:2rem; max-width:500px; margin-left:auto; margin-right:auto; }
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+  .contact-links{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;}
+  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1.25rem;text-decoration:none;transition:all .2s;}
+  .contact-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .contact-icon{font-size:1.4rem;}
+  .contact-label{font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.25rem;}
+  .contact-value{font-size:.85rem;color:var(--text);font-weight:500;}
+
+  /* CONTACT FORM */
+  .contact-form-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;}
+  .form-title{font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;color:var(--text);}
+  .form-group{margin-bottom:1.2rem;}
+  .form-group label{display:block;font-size:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;font-family:'Space Mono',monospace;}
+  .form-group input,.form-group textarea,.form-group select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem;color:var(--text);font-family:'Sora',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical;}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
+  .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text3);}
+  .form-group textarea{min-height:120px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .form-submit{width:100%;padding:.9rem;background:var(--accent);color:#0a0a0f;font-weight:700;font-size:.9rem;border:none;border-radius:6px;cursor:pointer;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;font-family:'Sora',sans-serif;}
+  .form-submit:hover{background:#00b8d9;transform:translateY(-1px);}
+  .form-success{display:none;text-align:center;padding:2rem;color:var(--accent3);font-size:.95rem;}
+  .form-success.show{display:block;}
 
   /* FOOTER */
-  footer {
-    border-top:1px solid var(--border);
-    padding:2rem 2.5rem; text-align:center;
-    color:var(--text3); font-size:0.8rem;
-    font-family:'Space Mono',monospace;
-  }
+  footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;color:var(--text3);font-size:.8rem;font-family:'Space Mono',monospace;}
 
-  /* ANIMATIONS */
-  @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-  .fade-up { animation: fadeUp 0.6s ease forwards; opacity:0; }
-  .fade-up:nth-child(1) { animation-delay:0.1s; }
-  .fade-up:nth-child(2) { animation-delay:0.2s; }
-  .fade-up:nth-child(3) { animation-delay:0.3s; }
-  .fade-up:nth-child(4) { animation-delay:0.4s; }
+  /* LANG */
+  [data-en]{display:none;}
+  body.en [data-es]{display:none;}
+  body.en [data-en]{display:unset;}
+  body.en span[data-en]{display:inline;}
+  body.en li[data-en]{display:list-item;}
+  body.en p[data-en]{display:block;}
+  body.en div[data-en]{display:flex;}
 
   /* RESPONSIVE */
-  @media(max-width:768px) {
-    .about-grid { grid-template-columns:1fr; }
-    .exp-item { grid-template-columns:1fr; gap:0.5rem; }
-    .ai-flow { grid-template-columns:1fr; }
-    .ai-arrow { transform:rotate(90deg); }
-    .contact-grid { grid-template-columns:1fr; }
-    .hero-stats { gap:1.5rem; flex-wrap:wrap; }
-    nav { padding:1rem 1.25rem; }
-    .nav-links { display:none; }
-    section { padding:4rem 1.25rem; }
+  @media(max-width:768px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-avatar{order:-1;display:flex;justify-content:center;}
+    .avatar-ring{width:180px;height:180px;}
+    .avatar-img,.avatar-initials{width:164px;height:164px;}
+    .about-grid{grid-template-columns:1fr;}
+    .exp-item{grid-template-columns:1fr;gap:.5rem;}
+    .ai-flow{grid-template-columns:1fr;}
+    .ai-arrow{transform:rotate(90deg);}
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-links{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .hero-stats{gap:1.5rem;flex-wrap:wrap;}
+    nav{padding:1rem 1.25rem;}
+    .nav-links{display:none;}
+    section{padding:4rem 1.25rem;}
   }
-
-  /* LANG TOGGLE */
-  [data-en] { display:none; }
-  body.en [data-es] { display:none; }
-  body.en [data-en] { display:unset; }
-  body.en span[data-en] { display:inline; }
-  body.en li[data-en] { display:list-item; }
-  body.en p[data-en] { display:block; }
-  body.en div[data-en] { display:flex; }
 </style>
 </head>
 <body>
-
 <div class="grid-bg"></div>
 <div class="glow"></div>
 
@@ -322,6 +200,7 @@
     <li><a href="#about" data-es>Sobre mí</a><a href="#about" data-en>About</a></li>
     <li><a href="#skills" data-es>Stack</a><a href="#skills" data-en>Stack</a></li>
     <li><a href="#experience" data-es>Experiencia</a><a href="#experience" data-en>Experience</a></li>
+    <li><a href="#certs" data-es>Certs</a><a href="#certs" data-en>Certs</a></li>
     <li><a href="#ai" data-es>IA</a><a href="#ai" data-en>AI</a></li>
     <li><a href="#contact" data-es>Contacto</a><a href="#contact" data-en>Contact</a></li>
   </ul>
@@ -330,48 +209,37 @@
 
 <!-- HERO -->
 <div id="hero">
-  <div class="hero-tag fade-up" data-es>Disponible para roles remotos</div>
-  <div class="hero-tag fade-up" data-en>Available for remote roles</div>
-
-  <h1 class="fade-up">
-    <span data-es>Hola, soy<br><span style="color:var(--accent)">William Corredor</span></span>
-    <span data-en>Hi, I'm<br><span style="color:var(--accent)">William Corredor</span></span>
-  </h1>
-
-  <p class="hero-sub fade-up">
-    <span data-es>Senior Backend Developer & Cloud Architect con 13+ años construyendo sistemas de alto impacto para banca, telecomunicaciones y seguros. Especializado en <strong style="color:var(--text)">Java · Node.js · AWS · Kubernetes</strong> e IA aplicada al desarrollo.</span>
-    <span data-en>Senior Backend Developer & Cloud Architect with 13+ years building high-impact systems for banking, telecom and insurance. Specialized in <strong style="color:var(--text)">Java · Node.js · AWS · Kubernetes</strong> and AI-powered development.</span>
-  </p>
-
-  <div class="hero-btns fade-up">
-    <a href="#contact" class="btn-primary">
-      <span data-es>Conectemos</span><span data-en>Let's connect</span> →
-    </a>
-    <a href="https://linkedin.com/in/william7190" target="_blank" class="btn-outline">LinkedIn ↗</a>
-    <a href="https://github.com/wilcor7190" target="_blank" class="btn-outline">GitHub ↗</a>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag" data-es>Disponible para roles remotos</div>
+      <div class="hero-tag" data-en>Available for remote roles</div>
+      <h1>
+        <span data-es>Hola, soy<br><span class="accent">William Corredor</span></span>
+        <span data-en>Hi, I'm<br><span class="accent">William Corredor</span></span>
+      </h1>
+      <p class="hero-sub">
+        <span data-es>Senior Backend Developer & Cloud Architect con 13+ años construyendo sistemas de alto impacto para banca, telecomunicaciones y seguros. Especializado en <strong style="color:var(--text)">Java · Node.js · AWS · Kubernetes</strong> e IA aplicada al desarrollo.</span>
+        <span data-en>Senior Backend Developer & Cloud Architect with 13+ years building high-impact systems for banking, telecom and insurance. Specialized in <strong style="color:var(--text)">Java · Node.js · AWS · Kubernetes</strong> and AI-powered development.</span>
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><span data-es>Conectemos</span><span data-en>Let's connect</span> →</a>
+        <a href="https://linkedin.com/in/william7190" target="_blank" class="btn-outline">LinkedIn ↗</a>
+        <a href="https://github.com/wilcor7190" target="_blank" class="btn-outline">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <div class="avatar-ring">
+        <img src="foto.jpg" alt="William Corredor" class="avatar-img">
+        <div class="avatar-badge" data-es>Disponible</div>
+        <div class="avatar-badge" data-en>Available</div>
+      </div>
+    </div>
   </div>
-
-  <div class="hero-stats fade-up">
-    <div>
-      <span class="stat-num">13+</span>
-      <span class="stat-label" data-es>Años de exp.</span>
-      <span class="stat-label" data-en>Years exp.</span>
-    </div>
-    <div>
-      <span class="stat-num">400+</span>
-      <span class="stat-label" data-es>APIs migradas</span>
-      <span class="stat-label" data-en>APIs migrated</span>
-    </div>
-    <div>
-      <span class="stat-num">30</span>
-      <span class="stat-label" data-es>Devs liderados</span>
-      <span class="stat-label" data-en>Devs led</span>
-    </div>
-    <div>
-      <span class="stat-num">60%</span>
-      <span class="stat-label" data-es>Más rápido con IA</span>
-      <span class="stat-label" data-en>Faster with AI</span>
-    </div>
+  <div class="hero-stats">
+    <div><span class="stat-num">13+</span><span class="stat-label" data-es>Años de exp.</span><span class="stat-label" data-en>Years exp.</span></div>
+    <div><span class="stat-num">400+</span><span class="stat-label" data-es>APIs migradas</span><span class="stat-label" data-en>APIs migrated</span></div>
+    <div><span class="stat-num">30</span><span class="stat-label" data-es>Devs liderados</span><span class="stat-label" data-en>Devs led</span></div>
+    <div><span class="stat-num">60%</span><span class="stat-label" data-es>Más rápido con IA</span><span class="stat-label" data-en>Faster with AI</span></div>
   </div>
 </div>
 
@@ -379,10 +247,7 @@
 <section id="about">
   <div class="section-label" data-es>Sobre mí</div>
   <div class="section-label" data-en>About me</div>
-  <h2 class="section-title">
-    <span data-es>Arquitecto que <span style="color:var(--accent)">ejecuta</span></span>
-    <span data-en>An architect who <span style="color:var(--accent)">ships</span></span>
-  </h2>
+  <h2 class="section-title"><span data-es>Arquitecto que <span style="color:var(--accent)">ejecuta</span></span><span data-en>An architect who <span style="color:var(--accent)">ships</span></span></h2>
   <div class="about-grid">
     <div class="about-text">
       <p data-es>Con más de <strong>13 años</strong> construyendo sistemas críticos para banca, telecomunicaciones y seguros, aprendí que el código importa — pero comunicar el impacto importa igual.</p>
@@ -393,42 +258,10 @@
       <p data-en>Today I integrate <strong>generative AI</strong> as part of real dev workflows: MCP, Claude Agents, Agent.md — not as an experiment, but as a measurable competitive advantage.</p>
     </div>
     <div class="about-cards">
-      <div class="about-card">
-        <div class="about-card-icon">☁️</div>
-        <div>
-          <div class="about-card-title" data-es>Cloud Native</div>
-          <div class="about-card-title" data-en>Cloud Native</div>
-          <div class="about-card-text" data-es>AWS · Azure · OpenShift · Kubernetes · Docker</div>
-          <div class="about-card-text" data-en>AWS · Azure · OpenShift · Kubernetes · Docker</div>
-        </div>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">⚙️</div>
-        <div>
-          <div class="about-card-title" data-es>Backend & APIs</div>
-          <div class="about-card-title" data-en>Backend & APIs</div>
-          <div class="about-card-text" data-es>Java Spring Boot · Node.js · Python · REST/SOAP</div>
-          <div class="about-card-text" data-en>Java Spring Boot · Node.js · Python · REST/SOAP</div>
-        </div>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">🤖</div>
-        <div>
-          <div class="about-card-title" data-es>IA Aplicada</div>
-          <div class="about-card-title" data-en>Applied AI</div>
-          <div class="about-card-text" data-es>MCP · Claude Agents · Agent.md · LLM Workflows</div>
-          <div class="about-card-text" data-en>MCP · Claude Agents · Agent.md · LLM Workflows</div>
-        </div>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">🚀</div>
-        <div>
-          <div class="about-card-title" data-es>DevOps & CI/CD</div>
-          <div class="about-card-title" data-en>DevOps & CI/CD</div>
-          <div class="about-card-text" data-es>Azure DevOps · Jenkins · SonarQube · Pipelines</div>
-          <div class="about-card-text" data-en>Azure DevOps · Jenkins · SonarQube · Pipelines</div>
-        </div>
-      </div>
+      <div class="about-card"><div class="about-card-icon">☁️</div><div><div class="about-card-title">Cloud Native</div><div class="about-card-text">AWS · Azure · OpenShift · Kubernetes · Docker</div></div></div>
+      <div class="about-card"><div class="about-card-icon">⚙️</div><div><div class="about-card-title">Backend & APIs</div><div class="about-card-text">Java Spring Boot · Node.js · Python · REST/SOAP</div></div></div>
+      <div class="about-card"><div class="about-card-icon">🤖</div><div><div class="about-card-title" data-es>IA Aplicada</div><div class="about-card-title" data-en>Applied AI</div><div class="about-card-text">MCP · Claude Agents · Agent.md · LLM Workflows</div></div></div>
+      <div class="about-card"><div class="about-card-icon">🚀</div><div><div class="about-card-title">DevOps & CI/CD</div><div class="about-card-text">Azure DevOps · Jenkins · SonarQube · Pipelines</div></div></div>
     </div>
   </div>
 </section>
@@ -436,86 +269,35 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Tech Stack</div>
-  <h2 class="section-title">
-    <span data-es>Herramientas con las que <span style="color:var(--accent)">entrego</span></span>
-    <span data-en>Tools I <span style="color:var(--accent)">ship</span> with</span>
-  </h2>
+  <h2 class="section-title"><span data-es>Herramientas con las que <span style="color:var(--accent)">entrego</span></span><span data-en>Tools I <span style="color:var(--accent)">ship</span> with</span></h2>
   <div class="skills-grid">
     <div class="skill-group">
       <div class="skill-group-title" data-es>Lenguajes & Frameworks</div>
       <div class="skill-group-title" data-en>Languages & Frameworks</div>
-      <div class="skill-tags">
-        <span class="skill-tag hot">Java 17+</span>
-        <span class="skill-tag hot">Spring Boot</span>
-        <span class="skill-tag hot">Node.js</span>
-        <span class="skill-tag hot">TypeScript</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Angular</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">Express</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag hot">Java 17+</span><span class="skill-tag hot">Spring Boot</span><span class="skill-tag hot">Node.js</span><span class="skill-tag hot">TypeScript</span><span class="skill-tag">Python</span><span class="skill-tag">Angular</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Express</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Cloud & Containers</div>
-      <div class="skill-tags">
-        <span class="skill-tag hot">AWS Lambda</span>
-        <span class="skill-tag hot">ECS Fargate</span>
-        <span class="skill-tag hot">Kubernetes</span>
-        <span class="skill-tag hot">OpenShift</span>
-        <span class="skill-tag">API Gateway</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Azure</span>
-        <span class="skill-tag">Step Functions</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag hot">AWS Lambda</span><span class="skill-tag hot">ECS Fargate</span><span class="skill-tag hot">Kubernetes</span><span class="skill-tag hot">OpenShift</span><span class="skill-tag">API Gateway</span><span class="skill-tag">Docker</span><span class="skill-tag">Azure</span><span class="skill-tag">Step Functions</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">DevOps & CI/CD</div>
-      <div class="skill-tags">
-        <span class="skill-tag hot">Azure DevOps</span>
-        <span class="skill-tag">Jenkins</span>
-        <span class="skill-tag">SonarQube</span>
-        <span class="skill-tag">GitLab CI</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">IaC</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag hot">Azure DevOps</span><span class="skill-tag">Jenkins</span><span class="skill-tag">SonarQube</span><span class="skill-tag">GitLab CI</span><span class="skill-tag">Git</span><span class="skill-tag">IaC</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title" data-es>Bases de Datos</div>
       <div class="skill-group-title" data-en>Databases</div>
-      <div class="skill-tags">
-        <span class="skill-tag hot">Oracle</span>
-        <span class="skill-tag hot">MongoDB</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Redis</span>
-        <span class="skill-tag">Cassandra</span>
-        <span class="skill-tag">MySQL</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag hot">Oracle</span><span class="skill-tag hot">MongoDB</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Redis</span><span class="skill-tag">Cassandra</span><span class="skill-tag">MySQL</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title" data-es>IA & Automatización</div>
       <div class="skill-group-title" data-en>AI & Automation</div>
-      <div class="skill-tags">
-        <span class="skill-tag hot">Claude Agents</span>
-        <span class="skill-tag hot">MCP</span>
-        <span class="skill-tag hot">Agent.md</span>
-        <span class="skill-tag">LangChain</span>
-        <span class="skill-tag">LLM Workflows</span>
-        <span class="skill-tag">Generative AI</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag hot">Claude Agents</span><span class="skill-tag hot">MCP</span><span class="skill-tag hot">Agent.md</span><span class="skill-tag">LangChain</span><span class="skill-tag">LLM Workflows</span><span class="skill-tag">Generative AI</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title" data-es>Integración & APIs</div>
       <div class="skill-group-title" data-en>Integration & APIs</div>
-      <div class="skill-tags">
-        <span class="skill-tag">REST / SOAP</span>
-        <span class="skill-tag">Oracle SOA</span>
-        <span class="skill-tag">BPEL</span>
-        <span class="skill-tag">3scale</span>
-        <span class="skill-tag">IBM API Connect</span>
-        <span class="skill-tag">Apigee</span>
-        <span class="skill-tag">Swagger</span>
-      </div>
+      <div class="skill-tags"><span class="skill-tag">REST / SOAP</span><span class="skill-tag">Oracle SOA</span><span class="skill-tag">BPEL</span><span class="skill-tag">3scale</span><span class="skill-tag">IBM API Connect</span><span class="skill-tag">Apigee</span><span class="skill-tag">Swagger</span></div>
     </div>
   </div>
 </section>
@@ -524,37 +306,24 @@
 <section id="experience">
   <div class="section-label" data-es>Experiencia</div>
   <div class="section-label" data-en>Experience</div>
-  <h2 class="section-title">
-    <span data-es>13 años de <span style="color:var(--accent)">impacto real</span></span>
-    <span data-en>13 years of <span style="color:var(--accent)">real impact</span></span>
-  </h2>
+  <h2 class="section-title"><span data-es>13 años de <span style="color:var(--accent)">impacto real</span></span><span data-en>13 years of <span style="color:var(--accent)">real impact</span></span></h2>
   <div class="exp-list">
-
     <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Ene – Mar 2026</div>
-        <div class="exp-company">Subocol / Orbika</div>
-        <div class="exp-loc">via Cinte · Freelance · Remoto</div>
-      </div>
+      <div><div class="exp-period">Ene – Mar 2026</div><div class="exp-company">Subocol / Orbika</div><div class="exp-loc">via Cinte · Freelance · Remoto</div></div>
       <div>
         <div class="exp-title" data-es>Desarrollador Backend Senior – AWS & IA</div>
         <div class="exp-title" data-en>Senior Backend Developer – AWS & AI</div>
         <ul class="exp-bullets">
           <li data-es>Optimicé 20 funciones AWS Lambda (Python/Java) para plataforma de siniestros vehiculares — entrega funcional en ~6 semanas.</li>
           <li data-en>Optimized 20 AWS Lambda functions (Python/Java) for a vehicle claims platform — functional delivery in ~6 weeks.</li>
-          <li data-es>Implementé flujo de desarrollo 100% asistido por IA: Claude + Agent.md + MCP conectado a DB y ClickUp — reduciendo tiempo de entrega en 60%+.</li>
-          <li data-en>Implemented 100% AI-assisted dev workflow: Claude + Agent.md + MCP connected to DB and ClickUp — reducing delivery time by 60%+.</li>
+          <li data-es>Flujo 100% asistido por IA: Claude + Agent.md + MCP conectado a DB y ClickUp — reduciendo tiempo de entrega en 60%+.</li>
+          <li data-en>100% AI-assisted workflow: Claude + Agent.md + MCP connected to DB and ClickUp — reducing delivery time by 60%+.</li>
         </ul>
         <div class="exp-tags"><span class="exp-tag">AWS Lambda</span><span class="exp-tag">Python</span><span class="exp-tag">Java</span><span class="exp-tag">MCP</span><span class="exp-tag">Claude AI</span><span class="exp-tag">ECS</span></div>
       </div>
     </div>
-
     <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">May 2022 – Nov 2025</div>
-        <div class="exp-company">Global Hitss – Claro</div>
-        <div class="exp-loc">Colombia · Remoto</div>
-      </div>
+      <div><div class="exp-period">May 2022 – Nov 2025</div><div class="exp-company">Global Hitss – Claro</div><div class="exp-loc">Colombia · Remoto</div></div>
       <div>
         <div class="exp-title" data-es>Arquitecto de Software Expert</div>
         <div class="exp-title" data-en>Expert Software Architect</div>
@@ -569,13 +338,8 @@
         <div class="exp-tags"><span class="exp-tag">OpenShift</span><span class="exp-tag">Kubernetes</span><span class="exp-tag">Node.js</span><span class="exp-tag">Java</span><span class="exp-tag">Azure DevOps</span><span class="exp-tag">Angular</span><span class="exp-tag">React</span></div>
       </div>
     </div>
-
     <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Feb 2021 – May 2022</div>
-        <div class="exp-company">Carvajal T&S</div>
-        <div class="exp-loc">Colombia · Remoto</div>
-      </div>
+      <div><div class="exp-period">Feb 2021 – May 2022</div><div class="exp-company">Carvajal T&S</div><div class="exp-loc">Colombia · Remoto</div></div>
       <div>
         <div class="exp-title" data-es>Arquitecto de Software / Developer Senior</div>
         <div class="exp-title" data-en>Software Architect / Senior Developer</div>
@@ -588,13 +352,8 @@
         <div class="exp-tags"><span class="exp-tag">AWS</span><span class="exp-tag">Spring Boot</span><span class="exp-tag">Java 17</span><span class="exp-tag">Spring Security</span><span class="exp-tag">Angular</span><span class="exp-tag">React</span></div>
       </div>
     </div>
-
     <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Jun 2018 – Feb 2021</div>
-        <div class="exp-company">everis / NTT DATA</div>
-        <div class="exp-loc">Bogotá · Híbrido</div>
-      </div>
+      <div><div class="exp-period">Jun 2018 – Feb 2021</div><div class="exp-company">everis / NTT DATA</div><div class="exp-loc">Bogotá · Híbrido</div></div>
       <div>
         <div class="exp-title" data-es>Arquitecto SOA & Microservicios / Tech Lead</div>
         <div class="exp-title" data-en>SOA & Microservices Architect / Tech Lead</div>
@@ -607,14 +366,8 @@
         <div class="exp-tags"><span class="exp-tag">Azure</span><span class="exp-tag">Kubernetes</span><span class="exp-tag">Spring Boot</span><span class="exp-tag">3scale</span><span class="exp-tag">IBM API Connect</span><span class="exp-tag">Tech Lead</span></div>
       </div>
     </div>
-
     <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">2013 – 2018</div>
-        <div class="exp-company" data-es>SOAINT · Everis · TCS · SETI</div>
-        <div class="exp-company" data-en>SOAINT · Everis · TCS · SETI</div>
-        <div class="exp-loc">Bogotá</div>
-      </div>
+      <div><div class="exp-period">2013 – 2018</div><div class="exp-company">SOAINT · Everis · TCS · SETI</div><div class="exp-loc">Bogotá</div></div>
       <div>
         <div class="exp-title" data-es>Consultor SOA / BPM / BAM</div>
         <div class="exp-title" data-en>SOA / BPM / BAM Consultant</div>
@@ -629,36 +382,50 @@
         <div class="exp-tags"><span class="exp-tag">Oracle SOA</span><span class="exp-tag">BPEL</span><span class="exp-tag">Oracle BPM</span><span class="exp-tag">BAM</span><span class="exp-tag">ADF</span><span class="exp-tag">Java</span></div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- AI SECTION -->
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="section-label" data-es>Certificaciones</div>
+  <div class="section-label" data-en>Certifications</div>
+  <h2 class="section-title"><span data-es>Aprendizaje <span style="color:var(--accent)">continuo</span></span><span data-en><span style="color:var(--accent)">Continuous</span> learning</span></h2>
+  <div class="certs-grid">
+    <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Cloud Practitioner Essentials</div><div class="cert-issuer">Amazon Web Services</div><div class="cert-year">2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔷</div><div><div class="cert-name">AZ-900 Microsoft Azure Fundamentals</div><div class="cert-issuer">Microsoft · Udemy</div><div class="cert-year">2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">Bootcamp IA Generativa, LLMs & Agentes</div><div class="cert-issuer">Udemy</div><div class="cert-year">2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔑</div><div><div class="cert-name">Apigee Edge – Beginner to Paid Professional</div><div class="cert-issuer">Udemy</div><div class="cert-year">2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">⚙️</div><div><div class="cert-name">Keycloak: SSO con Spring Boot & Spring Security</div><div class="cert-issuer">Udemy</div><div class="cert-year">2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🐳</div><div><div class="cert-name">Kubernetes y Docker para Developers</div><div class="cert-issuer">Udemy</div><div class="cert-year">2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🟢</div><div><div class="cert-name">Node.js: De cero a experto</div><div class="cert-issuer">Udemy</div><div class="cert-year">2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🏗️</div><div><div class="cert-name">Arquitectura de Software – Arquisoft90</div><div class="cert-issuer">Udemy</div><div class="cert-year">2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">⚛️</div><div><div class="cert-name">Microfrontends with React</div><div class="cert-issuer">Udemy</div><div class="cert-year">2025</div></div></div>
+  </div>
+</section>
+
+<!-- AI -->
 <section id="ai">
   <div class="section-label" data-es>Diferenciador</div>
   <div class="section-label" data-en>Differentiator</div>
-  <h2 class="section-title">
-    <span data-es>IA como <span style="color:var(--accent)">ventaja real</span></span>
-    <span data-en>AI as a <span style="color:var(--accent)">real advantage</span></span>
-  </h2>
+  <h2 class="section-title"><span data-es>IA como <span style="color:var(--accent)">ventaja real</span></span><span data-en>AI as a <span style="color:var(--accent)">real advantage</span></span></h2>
   <div class="ai-section">
-    <p style="color:var(--text2); font-size:0.9rem; max-width:600px;" data-es>No solo "uso IA". La integro como parte del flujo de desarrollo real, con herramientas concretas que reducen ciclos de entrega y errores humanos:</p>
-    <p style="color:var(--text2); font-size:0.9rem; max-width:600px;" data-en>I don't just "use AI". I integrate it as part of the real dev workflow, with concrete tools that reduce delivery cycles and human errors:</p>
+    <p style="color:var(--text2);font-size:.9rem;max-width:600px;" data-es>No solo "uso IA". La integro como parte del flujo de desarrollo real, con herramientas concretas que reducen ciclos de entrega y errores humanos:</p>
+    <p style="color:var(--text2);font-size:.9rem;max-width:600px;" data-en>I don't just "use AI". I integrate it as part of the real dev workflow, with concrete tools that reduce delivery cycles and human errors:</p>
     <div class="ai-flow">
       <div class="ai-box">
         <div class="ai-box-label" data-es>Flujo tradicional</div>
         <div class="ai-box-label" data-en>Traditional workflow</div>
         <div class="ai-box-title" data-es>Analizar → Diseñar → Codear → Probar → Desplegar</div>
         <div class="ai-box-title" data-en>Analyze → Design → Code → Test → Deploy</div>
-        <div class="ai-box-sub" style="color:var(--text3); margin-top:0.5rem;">100% tiempo / time</div>
+        <div class="ai-box-sub" style="color:var(--text3);margin-top:.5rem;">100% tiempo / time</div>
       </div>
       <div class="ai-arrow">→</div>
-      <div class="ai-box" style="border-color:rgba(16,185,129,0.3);">
+      <div class="ai-box" style="border-color:rgba(16,185,129,.3);">
         <div class="ai-box-label" style="color:var(--accent3)" data-es>Mi flujo con IA</div>
         <div class="ai-box-label" style="color:var(--accent3)" data-en>My AI workflow</div>
         <div class="ai-box-title" data-es>Claude + MCP + Agent.md + Subagentes</div>
         <div class="ai-box-title" data-en>Claude + MCP + Agent.md + Sub-agents</div>
-        <div class="ai-box-sub" style="color:var(--accent3); margin-top:0.5rem;">~40% tiempo / time</div>
+        <div class="ai-box-sub" style="color:var(--accent3);margin-top:.5rem;">~40% tiempo / time</div>
       </div>
     </div>
     <div class="ai-result">
@@ -680,56 +447,59 @@
 <section id="contact">
   <div class="section-label" data-es>Contacto</div>
   <div class="section-label" data-en>Contact</div>
-  <h2 class="section-title">
-    <span data-es>¿Trabajamos <span style="color:var(--accent)">juntos?</span></span>
-    <span data-en>Let's <span style="color:var(--accent)">work together</span></span>
-  </h2>
+  <h2 class="section-title"><span data-es>¿Trabajamos <span style="color:var(--accent)">juntos?</span></span><span data-en>Let's <span style="color:var(--accent)">work together</span></span></h2>
   <div class="contact-grid">
-    <a href="mailto:wilcor7190@gmail.com" class="contact-card">
-      <div class="contact-icon">📧</div>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">wilcor7190@gmail.com</div>
+    <div>
+      <div class="contact-links">
+        <a href="mailto:wilcor7190@gmail.com" class="contact-card"><div class="contact-icon">📧</div><div><div class="contact-label">Email</div><div class="contact-value">wilcor7190@gmail.com</div></div></a>
+        <a href="https://linkedin.com/in/william7190" target="_blank" class="contact-card"><div class="contact-icon">💼</div><div><div class="contact-label">LinkedIn</div><div class="contact-value">william7190</div></div></a>
+        <a href="https://github.com/wilcor7190" target="_blank" class="contact-card"><div class="contact-icon">⚡</div><div><div class="contact-label">GitHub</div><div class="contact-value">wilcor7190</div></div></a>
+        <a href="tel:+573214189491" class="contact-card"><div class="contact-icon">📱</div><div><div class="contact-label" data-es>Teléfono</div><div class="contact-label" data-en>Phone</div><div class="contact-value">+57 321 418 9491</div></div></a>
       </div>
-    </a>
-    <a href="https://linkedin.com/in/william7190" target="_blank" class="contact-card">
-      <div class="contact-icon">💼</div>
-      <div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">linkedin.com/in/william7190</div>
+      <p style="color:var(--text2);font-size:.9rem;line-height:1.8;" data-es>Estoy abierto a roles remotos de <strong style="color:var(--text)">Backend Senior, Cloud Architect o Tech Lead</strong> en equipos que valoren la entrega con criterio técnico y estén abiertos a integrar IA.</p>
+      <p style="color:var(--text2);font-size:.9rem;line-height:1.8;" data-en>I'm open to remote <strong style="color:var(--text)">Senior Backend, Cloud Architect or Tech Lead</strong> roles in teams that value technical depth and are open to AI-assisted development.</p>
+    </div>
+    <div class="contact-form-wrap">
+      <div class="form-title" data-es>Envíame un mensaje</div>
+      <div class="form-title" data-en>Send me a message</div>
+      <div class="form-success" id="formSuccess">
+        <div style="font-size:2rem;margin-bottom:.5rem;">✅</div>
+        <span data-es>¡Mensaje enviado! Te respondo pronto.</span>
+        <span data-en>Message sent! I'll get back to you soon.</span>
       </div>
-    </a>
-    <a href="https://github.com/wilcor7190" target="_blank" class="contact-card">
-      <div class="contact-icon">⚡</div>
-      <div>
-        <div class="contact-label">GitHub</div>
-        <div class="contact-value">github.com/wilcor7190</div>
-      </div>
-    </a>
-    <a href="tel:+573214189491" class="contact-card">
-      <div class="contact-icon">📱</div>
-      <div>
-        <div class="contact-label" data-es>Teléfono</div>
-        <div class="contact-label" data-en>Phone</div>
-        <div class="contact-value">+57 321 418 9491</div>
-      </div>
-    </a>
-  </div>
-  <div class="contact-cta">
-    <h3 data-es>Abierto a roles remotos Senior Backend · Cloud · Tech Lead</h3>
-    <h3 data-en>Open to remote Senior Backend · Cloud · Tech Lead roles</h3>
-    <p data-es>Especialmente en equipos que valoren la entrega con criterio técnico y estén abiertos a integrar IA en sus flujos de trabajo.</p>
-    <p data-en>Especially in teams that value technical depth and are open to AI-assisted development workflows.</p>
-    <a href="mailto:wilcor7190@gmail.com" class="btn-primary" style="display:inline-flex;">
-      <span data-es>Enviar mensaje</span><span data-en>Send message</span> →
-    </a>
+      <form id="contactForm" action="https://formspree.io/f/wilcor7190@gmail.com" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-es>Nombre</label>
+            <label data-en>Name</label>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-es>Asunto</label>
+          <label data-en>Subject</label>
+          <input type="text" name="subject" placeholder="Propuesta de trabajo / Job opportunity">
+        </div>
+        <div class="form-group">
+          <label data-es>Mensaje</label>
+          <label data-en>Message</label>
+          <textarea name="message" placeholder="Cuéntame sobre el rol / Tell me about the role..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <span data-es>Enviar mensaje →</span>
+          <span data-en>Send message →</span>
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
 <footer>
-  <span>William Fernando Corredor Avendaño</span> · 
-  <span>Senior Backend Developer & Cloud Architect</span> · 
-  <span>Bogotá, Colombia 🇨🇴</span>
+  <span>William Fernando Corredor Avendaño</span> · <span>Senior Backend Developer & Cloud Architect</span> · <span>Bogotá, Colombia 🇨🇴</span>
 </footer>
 
 <script>
@@ -741,20 +511,45 @@
     document.documentElement.lang = isEn ? 'en' : 'es';
   }
 
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = '⏳ Enviando...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      } else {
+        btn.textContent = isEn ? 'Send message →' : 'Enviar mensaje →';
+        btn.disabled = false;
+        alert(isEn ? 'Error sending. Please email directly.' : 'Error al enviar. Escríbeme directamente.');
+      }
+    } catch {
+      window.location.href = 'mailto:wilcor7190@gmail.com';
+    }
+  });
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('fade-up'); });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.exp-item, .skill-group, .about-card, .contact-card').forEach(el => {
+
+  document.querySelectorAll('.exp-item,.skill-group,.about-card,.contact-card,.cert-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
-  });
-  document.querySelectorAll('.exp-item, .skill-group, .about-card, .contact-card').forEach(el => {
-    const io = new IntersectionObserver(([entry]) => {
-      if(entry.isIntersecting) { el.style.opacity='1'; el.style.transform='translateY(0)'; io.disconnect(); }
-    }, {threshold:0.1});
-    io.observe(el);
   });
 </script>
 </body>
