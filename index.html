@@ -157,6 +157,11 @@
   .form-success{display:none;text-align:center;padding:2rem;color:var(--accent3);font-size:.95rem;}
   .form-success.show{display:block;}
 
+  /* FORM LANG FIX */
+  .form-group label[data-en]{display:none;}
+  body.en .form-group label[data-es]{display:none;}
+  body.en .form-group label[data-en]{display:block;}
+
   /* FOOTER */
   footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;color:var(--text3);font-size:.8rem;font-family:'Space Mono',monospace;}
 
@@ -467,7 +472,7 @@
         <span data-es>¡Mensaje enviado! Te respondo pronto.</span>
         <span data-en>Message sent! I'll get back to you soon.</span>
       </div>
-      <form id="contactForm" action="https://formspree.io/f/wilcor7190@gmail.com" method="POST">
+      <form id="contactForm" action="https://formspree.io/f/mnjgwyao" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label data-es>Nombre</label>
